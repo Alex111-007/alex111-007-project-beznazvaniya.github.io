@@ -37,9 +37,10 @@ header .menu{
 header{
 	width: 100%;
 	height: 100px;
-	background: #282828;
+	background: #28282891;
 	position: fixed;
 	z-index: 50;
+	/*! visibility: hidden; */
 }
 header:before{
 	content: '';
@@ -388,7 +389,7 @@ a:hover:before {
 		height: 1px;
 		/*! left: 0; */
 		/*! top: 9px; */
-		right: 1%;
+		right: 3%;
 		top: 20px;
 	}
 	.menu_b:before,
@@ -398,7 +399,7 @@ a:hover:before {
 		position: absolute;
 		height: 1px;
 		right: 0;
-		right: 1%;
+		right: 3%;
 	}
 
 	header .logo{
@@ -479,5 +480,80 @@ a:hover:before {
 	.menu_b.active:after{
 		transform: rotate(-45deg);
 		bottom: 0;
+	}
+}
+
+/* section 1 */
+.section_1{
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+}
+.section_text_block{
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	position: absolute;
+	top: 0;
+	height: 100vh;
+	justify-content: center;	
+	/*! margin: 20px 0px 20px 0p; */
+	/*! background: #000; */
+}
+.section_text_block .text_t{
+	color: #fff;
+	font-family: 'HelveticaNeueCyr-UltraLight';
+	letter-spacing: 3px;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	text-decoration: none;
+	text-align: center;
+}
+.section_text_block h1{
+	color: #fff; font-family: 'Pobeda Bold'; letter-spacing: 3px;font-size: 64px;
+	text-align: center;
+	margin: 20px 0px 0px 10px;
+}
+.section_text_block .text_b{
+	color: #fff;
+	font-family: 'HelveticaNeueCyr-UltraLight';
+	letter-spacing: 3px;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	text-decoration: none;
+	text-align: center;	
+	/*! position: absolute; */
+	/*! border: ; */
+	margin: 20px 0px 0px 0px;
+}
+.section_text_block img{
+	width: 70px;position: absolute;top: 80vh;/*! margin: 0px 50px 0px 50px; *//*! background: #000; */left: 50%;left: 50%;transform: translate(-50%, -50%);
+
+}
+.section_text_block img:after{
+	transform: translate3d(0, - 100%, 0);
+  animation: spin 1.4s infinite linear;
+}
+@keyframes spin {
+  0% {
+    transform: translate3d(0, -100%, 0);
+  }
+  50% {
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@media (max-width: 460px){
+	.section_text_block h1{
+		font-size: 50px;
+	}
+	.section_text_block .text_b{
+		font-size: 20px;
 	}
 }

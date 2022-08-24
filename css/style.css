@@ -555,7 +555,10 @@ a:hover:before {
 @media (max-width: 460px){
 	.section_1 .sec_1_bg{
 		background-image: linear-gradient(rgb(21, 21, 21), rgba(0, 0, 0, 0.5) ), url('../img/sections1/bg_small.png');
-		background-position: 50% 50%; background-attachment: fixed; background-size: cover; height: 100vh;
+		background-position: 50% 50%; 
+		background-attachment: fixed; 
+		background-size: cover; 
+		height: 100vh;
 	}
 	.section_text_block h1{
 		font-size: 50px;
